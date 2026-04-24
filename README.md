@@ -1,1 +1,1 @@
-# LifeHAck
+# LifeHack
