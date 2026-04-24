@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/txtQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Question here"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#222222"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="30dp">
+
+        <Button
+            android:id="@+id/btnTrue"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Hack"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/btnFalse"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Myth"
+            android:backgroundTint="#F44336"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"/>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Next Question"
+        android:textSize="18sp"
+        android:backgroundTint="#2196F3"
+        android:textColor="#FFFFFF"/>
+</LinearLayout>
