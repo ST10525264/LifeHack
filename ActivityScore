@@ -1,0 +1,35 @@
+package com.example.lifehack   // ⚠️ MUST match your folder name
+
+import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+
+class ScoreActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_score)
+
+        val txtScore = findViewById<TextView>(R.id.txtScore)
+                val txtFeedback = findViewById<TextView>(R.id.txtFinalFeedback)
+                val btnReview = findViewById<Button>(R.id.btnReview)
+
+                // ✅ MUST match QuizActivity
+                val score = intent.getIntExtra("score", 0)
+        val total = intent.getIntExtra("total", 0)
+
+        txtScore.text = "Score: $score / $total"
+
+        if (score >= 3) {
+            txtFeedback.text = "Good job!"
+        } else {
+            txtFeedback.text = "Keep practicing!"
+        }
+
+        btnReview.setOnClickListener {
+            txtFeedback.text =
+                    "Review:\nRice - Myth\nCold showers - Hack\nCharging - Myth\nWater - Hack\nKnuckles - Myth"
+        }
+    }
+}
